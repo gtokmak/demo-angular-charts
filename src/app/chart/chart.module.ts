@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChartComponent } from './chart.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ChartLineComponent } from './chart-line/chart-line.component';
 import { ChartBarComponent } from './chart-bar/chart-bar.component';
@@ -26,7 +25,7 @@ import { NgChartsModule } from 'ng2-charts';
     ChartPolarDoughnutComponent
   ],
   imports: [
-     BrowserModule, RouterModule,CommonModule, NgChartsModule
+     BrowserModule,CommonModule, NgChartsModule
   ],
   exports:[ ChartComponent ]
 })
