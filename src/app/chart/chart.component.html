@@ -1,0 +1,27 @@
+<navbar></navbar>
+
+
+<div class="container m-3">
+    <div class="row">
+        <div class="col-3">
+            <div class="list-group">
+                <button (click)="showAllChart() "  class="list-group-item list-group-item-action" >Charts</button>
+                <button (click)="charLine=!charLine" [class.active]="charLine" class="list-group-item list-group-item-action">Chart Line</button>
+                <button (click)="charBar=!charBar" [class.active]="charBar" class="list-group-item list-group-item-action">Chart Bar</button>
+                <button (click)="charPie=!charPie" [class.active]="charPie" class="list-group-item list-group-item-action">Chart Pie</button>
+                <button (click)="charPolarArea=!charPolarArea" [class.active]="charPolarArea" class="list-group-item list-group-item-action">Chart Polar Area</button>
+                <button (click)="charPolarDoughnut=!charPolarDoughnut" [class.active]="charPolarDoughnut" class="list-group-item list-group-item-action">Chart Polar Doughnut</button>
+                <button (click)="charRadar=!charRadar" [class.active]="charRadar" class="list-group-item list-group-item-action">Chart Radar</button>
+            </div>
+        </div>
+        <div class="col-9">
+            <chart-line *ngIf="charLine"></chart-line>
+            <chart-bar *ngIf="charBar"></chart-bar>
+            <chart-pie *ngIf="charPie"></chart-pie>
+            <chart-polar-area *ngIf="charPolarArea"></chart-polar-area>
+            <chart-polar-doughnut *ngIf="charPolarDoughnut"></chart-polar-doughnut>
+            <chart-radar *ngIf="charRadar"></chart-radar>
+        </div>
+
+    </div>
+</div>
